@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* src/styles/globals.css */
+:root {
+    --custom-color1: 0 0 0; /* RGB color for example */
+    --custom-color2: 20 24 28;
+    --custom-color3: 12 16 20;
+}
+
+.image-shadow {
+    position: relative;
+  }
+  
+  .image-shadow::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    filter: blur(20px);
+    z-index: -1;
+    border-radius: inherit; /* Matches the image's rounded corners */
+  }
+  
