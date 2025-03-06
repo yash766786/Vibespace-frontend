@@ -50,7 +50,7 @@ function Login() {
     async function onloading() {
       try {
         const response = await getEmailForResetPassword();
-        console.log("fetching email for reseting password.", response);
+        // console.log("fetching email for reseting password.", response);
         if (response && response.success) navigate("/password-reset");
       } catch (error) {
         console.error("Error in onLoading:", error);

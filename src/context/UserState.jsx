@@ -38,14 +38,14 @@ export const UserProvider = ({ children }) => {
       return data;
 
     } catch (error) {
-      console.log("Error...", error);
+      // console.log("Error...", error);
       return { success: false, message: "Unexpected error during registration." };
     }
   };
 
   // done
   const verifyEmail = async (verifyCode) => {
-    console.log("Sending OTP for verification:", verifyCode);
+    // console.log("Sending OTP for verification:", verifyCode);
     try {
       const response = await fetch(`${conf.serverUrl}/users/verify-email`, {
         method: "POST",
@@ -69,7 +69,7 @@ export const UserProvider = ({ children }) => {
   // done
   const loginUser = async (user) => {
     const { email, password } = user;
-    // console.log(`${conf.serverUrl}/users/login`);
+    // // console.log(`${conf.serverUrl}/users/login`);
     try {
       const response = await fetch(`${conf.serverUrl}/users/login`, {
         method: "POST",
@@ -124,11 +124,11 @@ export const UserProvider = ({ children }) => {
 
       const data = await response.json();
       if (data.success)  setUser(data.data);
-      // console.log(data.data)
+      // // console.log(data.data)
       return data;
 
     } catch (error) {
-      console.log("Error during fetching user", error);
+      // console.log("Error during fetching user", error);
       return { success: false, message: "Unexpected error fetching user."};
     }
   };
@@ -147,7 +147,7 @@ export const UserProvider = ({ children }) => {
       return data;
 
     } catch (error) {
-      console.log("Error during fetching user profile", error);
+      // console.log("Error during fetching user profile", error);
       return { success: false, message: "Unexpected error fetching user profile."};
     }
   };
@@ -155,7 +155,7 @@ export const UserProvider = ({ children }) => {
   // done
   const updateAccountDetails = async (user) => {
     const { username, fullname } = user;
-    console.log(user);
+    // console.log(user);
 
     try {
       const response = await fetch(`${conf.serverUrl}/users/update-account`, {
@@ -171,17 +171,17 @@ export const UserProvider = ({ children }) => {
       if (data.success) {
         setUser(data.data);
       }
-      console.log(data);
+      // console.log(data);
       return data;
     } catch (error) {
-      console.log("Error...", error);
+      // console.log("Error...", error);
     }
   };
 
   // done
   const changeCurrentPassword = async (user) => {
     const { oldPassword, newPassword } = user;
-    console.log(user);
+    // console.log(user);
     try {
       const response = await fetch(`${conf.serverUrl}/users/change-password`, {
         method: "PATCH",
@@ -195,17 +195,17 @@ export const UserProvider = ({ children }) => {
       if(!response)  return { success: false, message: "Server is not responding." };
 
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       return data;
     } catch (error) {
-      console.log("Error during updating password", error);
+      // console.log("Error during updating password", error);
       return { success: false, message: "Unexpected error updating password."};
     }
   };
 
   // done
   const updateUserAvatar = async (avatar) => {
-    console.log(avatar)
+    // console.log(avatar)
 
     const formData = new FormData();
     formData.append("avatar", avatar);
@@ -218,10 +218,10 @@ export const UserProvider = ({ children }) => {
       });
 
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       return data;
     } catch (error) {
-      console.log("Error...", error);
+      // console.log("Error...", error);
     }
   };
 
@@ -242,7 +242,7 @@ export const UserProvider = ({ children }) => {
       return data;
 
     } catch (error) {
-      console.log("Error during checking username", error);
+      // console.log("Error during checking username", error);
       return { success: false, message: "Unexpected error checking username."};
     }
   };

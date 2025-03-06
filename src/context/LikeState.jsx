@@ -26,17 +26,17 @@ export const LikeProvider = ({ children }) => {
       const data = await response.json();
 
       if (data.success) {
-        console.log(data);
+        // console.log(data);
       }
       return data;
     } catch (error) {
-      console.log("Error...", error);
+      // console.log("Error...", error);
     }
   };
 
   // done
   const togglePostLike = async (postId) => {
-    console.log(postId);
+    // console.log(postId);
     try {
       const response = await fetch(
         `${conf.serverUrl}/likes/toggle/p/${postId}`,
@@ -52,7 +52,7 @@ export const LikeProvider = ({ children }) => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.log("Error while toggle post like ", error);
+      // console.log("Error while toggle post like ", error);
       return { success: false, message: "Unexpected error toggle post like." };
     }
   };
@@ -77,7 +77,7 @@ export const LikeProvider = ({ children }) => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.log("Error while toggle post like ", error);
+      // console.log("Error while toggle post like ", error);
       return { success: false, message: "Unexpected error toggle post like." };
     }
   };

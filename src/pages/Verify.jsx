@@ -20,7 +20,7 @@ function Verify() {
 
     setIsLoading(true);
     const response = await verifyEmail(otp);
-    console.log("response..", response);
+    // console.log("response..", response);
 
     if (response && response.success) {
       navigate("/");

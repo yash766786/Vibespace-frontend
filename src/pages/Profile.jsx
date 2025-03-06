@@ -40,7 +40,7 @@ const Profile = () => {
           setUserPost(getPost.data);
           setLoadingPost(false);
         }
-        console.log("userprofile", { response, getPost });
+        // console.log("userprofile", { response, getPost });
       } catch (error) {
         console.error("Error fetching user profile:", error);
       } finally {
@@ -67,7 +67,7 @@ const Profile = () => {
       setUserFollowers(response.data);
       setShowFollowerModal(true);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -77,7 +77,7 @@ const Profile = () => {
       setUserFollowings(response.data); // Fix here
       setShowFollowingModal(true);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

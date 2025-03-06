@@ -28,11 +28,11 @@ export const CommentProvider = ({ children }) => {
       const data = await response.json();
 
       if (data.success) {
-        console.log(data);
+        // console.log(data);
       }
       return data;
     } catch (error) {
-      console.log("Error...", error);
+      // console.log("Error...", error);
     }
   };
 
@@ -56,7 +56,7 @@ export const CommentProvider = ({ children }) => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.log("Error while adding comment", error);
+      // console.log("Error while adding comment", error);
       return { success: false, message: "Unexpected error add comment." };
     }
   };
@@ -78,11 +78,11 @@ export const CommentProvider = ({ children }) => {
       const data = await response.json();
 
       if (data.success) {
-        console.log(data);
+        // console.log(data);
       }
       return data;
     } catch (error) {
-      console.log("Error...", error);
+      // console.log("Error...", error);
     }
   };
 

@@ -32,9 +32,9 @@ function CommentItem({ comment, onDelete }) {
         isLiked ? setTotalLiked(totalLiked - 1) : setTotalLiked(totalLiked + 1);
         setIsLikedByUser(!isLiked);
       }
-      console.log(response);
+      // console.log(response);
     } catch (error) {
-      console.log("Error toggling like:", error);
+      // console.log("Error toggling like:", error);
     }
   };
 
@@ -49,11 +49,11 @@ function CommentItem({ comment, onDelete }) {
       try {
         const response = await deleteComment(_id);
         if (response && response.success) {
-          console.log("Comment deleted successfully.");
+          // console.log("Comment deleted successfully.");
           onDelete(_id); // Notify the parent to remove the comment
         }
       } catch (error) {
-        console.log("Error while deleting comment", error);
+        // console.log("Error while deleting comment", error);
       }
     }
   };

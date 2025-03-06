@@ -29,7 +29,7 @@ export const PostProvider = ({ children }) => {
         setPosts(data.data.posts);
          // Instead of replacing, append new posts to the existing ones
       // setPosts((prevPosts) => [...prevPosts, ...data.data.posts]);
-      console.log(data.data.posts)
+      // console.log(data.data.posts)
         setTotalPage(data.data.totalPages);
       }
       return data;
@@ -41,7 +41,7 @@ export const PostProvider = ({ children }) => {
   // done
   const addPost = async (post) => {
     const { postFile, description } = post;
-    console.log(post);
+    // console.log(post);
 
     const formData = new FormData();
     formData.append("postFile", postFile);
@@ -59,7 +59,7 @@ export const PostProvider = ({ children }) => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.log("Error while adding post", error);
+      // console.log("Error while adding post", error);
       return { success: false, message: "Unexpected error add post." };
     }
   };
@@ -81,7 +81,7 @@ export const PostProvider = ({ children }) => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.log("Error while updating post", error);
+      // console.log("Error while updating post", error);
       return { success: false, message: "Unexpected error update post." };
     }
   };
@@ -99,7 +99,7 @@ export const PostProvider = ({ children }) => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.log("Error while deleting post.", error);
+      // console.log("Error while deleting post.", error);
       return { success: false, message: "Unexpected error delete post." };
     }
   };
@@ -116,7 +116,7 @@ export const PostProvider = ({ children }) => {
 
       return data;
     } catch (error) {
-      console.log("Error...", error);
+      // console.log("Error...", error);
     }
   };
 

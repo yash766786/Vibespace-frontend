@@ -17,14 +17,14 @@ function CreatePost() {
     e.preventDefault();
     const response = await addPost(post);
     if (response.success) {
-      console.log("Post created successfully!");
+      // console.log("Post created successfully!");
       // Optionally, reset form or navigate to another page
       setPost({
         postFile: null,
         description: "",
       });
     } else {
-      console.log("Failed to create post");
+      // console.log("Failed to create post");
     }
   };
 

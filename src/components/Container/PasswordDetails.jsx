@@ -14,18 +14,18 @@ function PasswordDetails() {
 
     const handleChangePassword = async (e) => {
       e.preventDefault();
-       console.log("changing password..", passwordDetails)
+       // console.log("changing password..", passwordDetails)
   
       // Validate password match
       if (passwordDetails.newPassword !== passwordDetails.confirmPassword) {
-        console.log("Passwords do not match.")
+        // console.log("Passwords do not match.")
         return showAlert("Passwords do not match.", "danger");
       }
   
-      console.log("password matched")
+      // console.log("password matched")
       setIsLoading(true);
       const response = await changeCurrentPassword(passwordDetails);
-      console.log("password updation..", response);
+      // console.log("password updation..", response);
       if(response.success) showAlert(response.message, "success");
       else showAlert(response.message, "danger");
   

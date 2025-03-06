@@ -27,7 +27,7 @@ function AvatarDetails({ user, setUser }) {
 
     setIsLoading(true);
     const response = await updateUserAvatar(avatar);
-    console.log("Avatar updation..", response);
+    // console.log("Avatar updation..", response);
     if(response.success) showAlert(response.message, "success");
     else showAlert(response.message, "danger");
     setUser(response.data);

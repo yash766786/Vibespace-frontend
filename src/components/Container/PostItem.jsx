@@ -61,7 +61,7 @@ const PostItem = ({ post }) => {
         setIsPostModalOpen(false);
       }
     } catch (error) {
-      console.log("Error updating post:", error);
+      // console.log("Error updating post:", error);
       showAlert("Failed to update post", "error");
     }
   };
@@ -75,7 +75,7 @@ const PostItem = ({ post }) => {
         // Optionally remove the post from the UI if needed
       }
     } catch (error) {
-      console.log("Error deleting post:", error);
+      // console.log("Error deleting post:", error);
       showAlert("Failed to delete post", "error");
     }
   };
@@ -91,7 +91,7 @@ const PostItem = ({ post }) => {
         await getPostComments(_id);
       }
     } catch (error) {
-      console.log("Error adding comment:", error);
+      // console.log("Error adding comment:", error);
     }
   };
 
@@ -110,9 +110,9 @@ const PostItem = ({ post }) => {
         isLikedByUser ? showAlert(response.message, "warning") : showAlert(response.message, "info");
         setIsLikedByUser(!isLikedByUser);
       }
-      console.log(response);
+      // console.log(response);
     } catch (error) {
-      console.log("Error toggling like:", error);
+      // console.log("Error toggling like:", error);
     }
   };
 
@@ -126,7 +126,7 @@ const PostItem = ({ post }) => {
         showAlert(response.message, "danger");
       }
     } catch (error) {
-      console.log("Error fetching likes:", error);
+      // console.log("Error fetching likes:", error);
     }
   };
 
@@ -140,7 +140,7 @@ const PostItem = ({ post }) => {
         showAlert(response.message, "danger");
       }
     } catch (error) {
-      console.log("Error fetching comments:", error);
+      // console.log("Error fetching comments:", error);
     }
   };
 
@@ -205,7 +205,7 @@ const PostItem = ({ post }) => {
             <BiEdit
               className="text-gray-200 cursor-pointer"
               onClick={() => {
-                console.log("Opening modal");
+                // console.log("Opening modal");
                 setIsPostModalOpen(true);
               }}
             />

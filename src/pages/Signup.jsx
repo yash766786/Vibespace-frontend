@@ -29,7 +29,7 @@ function Signup() {
     }
 
     // Validate avatar file size(max size 5MB) and image type check
-    console.log("newuser...",newUser.avatar)
+    // console.log("newuser...",newUser.avatar)
     if (newUser.avatar) {
       if (newUser.avatar.size > 8 * 1024 * 1024) {
         return showAlert("Avatar size should be less than 5MB.", "danger");
@@ -42,7 +42,7 @@ function Signup() {
     setIsLoading(true);
 
     const response = await registerUser(newUser);
-    console.log(response, "is response");
+    // console.log(response, "is response");
 
     if (response && response.success) {
       navigate("/verify");

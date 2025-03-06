@@ -18,7 +18,7 @@ function UserDetails({accountDetails, setAccountDetails}) {
 
     setIsLoading(true);
     const response = await updateAccountDetails(accountDetails);
-    console.log("Account details updation..", response);
+    // console.log("Account details updation..", response);
     if(response.success) showAlert(response.message, "success");
     else showAlert(response.message, "danger");
     setIsLoading(false);

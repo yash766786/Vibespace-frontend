@@ -19,13 +19,13 @@ const ModalForComments = ({
   //     try {
   //       const response = await deleteComment(commentId);
   //     } catch (error) {
-  //       console.log("Error while deleting comment", error);
+  //       // console.log("Error while deleting comment", error);
         
   //     }
   //   }
   // }
   if (!isOpen) return null;
-  console.log("comment section.", comments);
+  // console.log("comment section.", comments);
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-10">

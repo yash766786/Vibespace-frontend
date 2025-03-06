@@ -22,7 +22,7 @@ function Notes() {
       await fetchAllNote();
       setIsNoteLoaded(true);
       const a = notes.length;
-      console.log(a);
+      // console.log(a);
     }
 
     onLoading();

@@ -16,7 +16,7 @@ function App() {
     async function onloading() {
       try {
         const response = await getCurrentUser();
-        console.log("fetching user detail..", response)
+        // console.log("fetching user detail..", response)
         if (!response)  navigate("/login");
         else if(!response.success) navigate("/login");
         else if(!response.data.isVerified) navigate("/verify")

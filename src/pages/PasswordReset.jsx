@@ -23,12 +23,12 @@ function PasswordReset() {
 
   useEffect(() => {
     async function onLoading() {
-        console.log("first checking if already email is sent")
+        // console.log("first checking if already email is sent")
       const response = await getEmailForResetPassword();
       if (response && response.success) {
         setEmail(response.data.email);
         setShowOtpAndPasswordField(true);
-        console.log(response)
+        // console.log(response)
       }
     }
     onLoading();
@@ -43,7 +43,7 @@ function PasswordReset() {
       setEmail(response.data.email);
       setShowOtpAndPasswordField(true);
       showAlert(response.message, "info");
-      console.log(response)
+      // console.log(response)
     } else {
       showAlert(response.message, "danger");
     }

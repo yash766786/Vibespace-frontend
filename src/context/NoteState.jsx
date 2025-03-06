@@ -32,13 +32,13 @@ export const NoteProvider = ({ children }) => {
 
     } 
     catch(error){
-      console.log("Error...", error)
+      // console.log("Error...", error)
     }
   };
 
 
   const addNote = async (title, description, theme = "black") => {
-    console.log({title, description, theme})
+    // console.log({title, description, theme})
     try {
       const response = await fetch(`${conf.serverUrl}/notes/`, {
           method: "POST",
@@ -59,13 +59,13 @@ export const NoteProvider = ({ children }) => {
 
     } 
     catch(error){
-      console.log("Error...", error)
+      // console.log("Error...", error)
     }
   };
 
 
   const updateNote = async (noteId, title, description, theme = "black") => {
-    console.log({title, description, theme})
+    // console.log({title, description, theme})
     try {
       const response = await fetch(`${conf.serverUrl}/notes/${noteId}`, {
           method: "PUT",
@@ -90,7 +90,7 @@ export const NoteProvider = ({ children }) => {
       
     } 
     catch(error){
-      console.log("Error...", error)
+      // console.log("Error...", error)
     }
   };
 
@@ -119,7 +119,7 @@ export const NoteProvider = ({ children }) => {
 
     } 
     catch(error){
-      console.log("Error...", error)
+      // console.log("Error...", error)
     }
   };
 

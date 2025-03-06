@@ -13,7 +13,7 @@ export const FollowProvider = ({ children }) => {
 
   // done
   const toggleFollowUser = async (username) => {
-    // console.log(username)
+    // // console.log(username)
     try {
         const response = await fetch(`${conf.serverUrl}/follow/toggle/u/${username}`, {
             method: "GET",
@@ -22,20 +22,20 @@ export const FollowProvider = ({ children }) => {
         );
 
         const data = await response.json();
-        console.log(data)
+        // console.log(data)
         if(data.success){
         }
         return data;
   
       } 
       catch(error){
-        console.log("Error...", error)
+        // console.log("Error...", error)
       }
   }
 
   // done
   const getFollowers = async (username) => {
-    console.log(username)
+    // console.log(username)
     try {
         const response = await fetch(`${conf.serverUrl}/follow/u/${username}/followers`, {
             method: "GET",
@@ -44,20 +44,20 @@ export const FollowProvider = ({ children }) => {
         );
 
         const data = await response.json();
-        // console.log(data)
+        // // console.log(data)
         if(data.success){
         }
         return data;
   
       } 
       catch(error){
-        console.log("Error...", error)
+        // console.log("Error...", error)
       }
   }
 
   // done
   const getFollowings = async (username) => {
-    // console.log(username)
+    // // console.log(username)
     try {
         const response = await fetch(`${conf.serverUrl}/follow/u/${username}/followings`, {
             method: "GET",
@@ -66,14 +66,14 @@ export const FollowProvider = ({ children }) => {
         );
 
         const data = await response.json();
-        // console.log(data)
+        // // console.log(data)
         if(data.success){
         }
         return data;
   
       } 
       catch(error){
-        console.log("Error...", error)
+        // console.log("Error...", error)
       }
   }
 
